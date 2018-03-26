@@ -48,9 +48,9 @@
   }
   var disqus_config = function() {
     this.page.url = getQueryVariable('url');
-    this.page.identifier = getQueryVariable('identifier') + ' ' + getQueryVariable('url') + '?p=' + getQueryVariable('identifier');
-      console.log(this.page.url);
-      console.log(this.page.identifier);
+    //this.page.identifier = getQueryVariable('identifier') + ' ' + getQueryVariable('url') + '?p=' + getQueryVariable('identifier');
+      this.page.identifier = getQueryVariable('url');
+    this.page.title = " ";  
   };
   (function() {
     var d = document,
