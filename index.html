@@ -48,13 +48,13 @@
   }
   var disqus_config = function() {
     this.page.url = getQueryVariable('url');
-    this.page.identifier = getQueryVariable('identifier');
+    this.page.identifier = getQueryVariable('identifier') + ' ' + getQueryVariable('url') + '?p=' + getQueryVariable('identifier');
     this.page.title = " ";  
   };
   (function() {
     var d = document,
         s = d.createElement('script'),
-        q = '#disqus_thread {font-family:' + getQueryVariable('fontBodyFamily') + '} a {color:#' + getQueryVariable('fontLinkColor') + '}';
+        q = 'a {color:#' + getQueryVariable('fontLinkColor') + '}';
         generateCss(q);
     s.src = '//groknation.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
